@@ -46,7 +46,6 @@ def check_vulnerable (target,path)
     
 
     end_time=Time.now-start_time
-    puts end_time.to_s
 
     if (end_time >9 )
         bVulnerable= true
@@ -143,9 +142,7 @@ if (options[:target] == nil or options[:dest] == nil)
   puts optparse
 
 else 
-    
-  puts t=options[:target]
-  puts d=options[:dest]
+
   exploit(t,d)
 
 end
