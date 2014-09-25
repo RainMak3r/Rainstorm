@@ -1,6 +1,6 @@
 ================================================================================================
 
-BadBash is a CVE-2014-6271 RCE tool. The basic version only checks for the HTTP CGI site and only provides netcat reverse shell on port 1234.
+BadBash is a CVE-2014-6271 RCE exploit tool. The basic version only checks for the HTTP CGI site and only provides netcat reverse shell on port 1234.
 
 
 Developer : Andy Yang
@@ -14,7 +14,7 @@ RainMak3r@Could:~/Desktop# ruby BadBash.rb  -h
  /__\/// _` |/ _` |/__\/// _` / __| '_ \ 
 / \/  \ (_| | (_| / \/  \ (_| \__ \ | | |      Basic Version - 0.1 by Andy Yang
 \_____/\__,_|\__,_\_____/\__,_|___/_| |_|      contactayang[AT]gmail[DOT]com
-                                 
+
 BadBash - CVE-2014-6271 RCE tool by Andy Yang
 Basic version only checks for HTTP site
 Basic version only provides netcat reverse shell on port 1234
