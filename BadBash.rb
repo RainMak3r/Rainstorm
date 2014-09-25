@@ -142,7 +142,8 @@ if (options[:target] == nil or options[:dest] == nil)
   puts optparse
 
 else 
-
+  t=options[:target]
+  d=options[:dest]
   exploit(t,d)
 
 end
